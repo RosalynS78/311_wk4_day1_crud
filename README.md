@@ -60,12 +60,24 @@ INSERT INTO users
 2. UPDATE all Ohio addresses to "REDACTED":
   UPDATE usersaddress 
 
+UPDATE usersaddress
 SET 
     state = 'REDACTED'
 WHERE
     state = 'OH';
 
+
 3. All three DELETES
+<!-- Delete all in order to work -->
+DELETE FROM users 
+WHERE
+    id = 114;
+DELETE FROM userscontact 
+WHERE
+    id = 114;
+DELETE FROM usersaddress 
+WHERE
+    id = 114;
 
 * DELETE from usersContact
 
