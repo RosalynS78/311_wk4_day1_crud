@@ -50,7 +50,7 @@ Let's delete the appropriate information from `usersContact`, `usersAddress` and
 ## SQL Statements
 
 1. INSERT two users:
-\
+
 INSERT INTO users
       (first_Name, last_Name)
   VALUES
@@ -68,7 +68,8 @@ WHERE
 
 
 3. All three DELETES
-<delete all in order to work>
+
+delete all in order to work
 
 DELETE FROM users 
 WHERE
@@ -104,13 +105,13 @@ DELETE FROM
 Upon deleting from users first came across error code - Error Code: 1451. Cannot delete or update a parent row: a foreign key constraint fails (`admin`.`usersaddress`, CONSTRAINT `usersaddress_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`))
 
 
-<another way to go around foreign key>
+another way to go around foreign key
 
-<to disable them>
+to disable them
 SET FOREIGN_KEY_CHECKS=0; 
 DELETE FROM `users` WHERE `id` = 114 LIMIT 1 
 
-<to re-enable them>     
+to re-enable them    
 SET FOREIGN_KEY_CHECKS=1; 
 
 
